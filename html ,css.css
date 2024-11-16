@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth; 
+}
+.parent {
+        display: flex; 
+        width: 100%;
+        height: 100%;
+    }
+.child1{
+    background-color:rgba(71,71,71);
+    color: rgb(255,255,255);
+    height:100%;
+    width:30%;
+    position:fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.child1 > h1{
+    border: 6px double gray;
+    padding: 30px;
+}
+.childlinks a{
+    text-decoration: none;
+    color: rgb(255,255,255);
+}
+.childlinks li{
+    list-style: square;
+}
+.childlinks li:hover{
+    transition-duration:1s;
+    transition-timing-function: linear;
+    transform: scale(0);
+}
+.footer a{
+    text-decoration: none;
+    color:rgb(255,255,255);
+}
+.footer a:hover{
+    color:orange;
+}
+.icons i{
+    color: black;
+    width:20px;
+    background-color: white;
+    margin: 10px;
+    padding:10px 20px;
+    border-radius: 10px;
+}
+.child2{
+    margin-left: 30%; 
+    width: 70%;
+}
+.introduction{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left:60%;
+    width: 32%;
+    height: 55%;
+    padding:2%;
+    border:1px solid black;
+    color: rgb(51,51,51);
+    box-sizing: border-box;
+    background-color: rgba(255,255,255,0.1);
+}
+.introduction > h2{
+    color: rgb(0,102,153);
+}
+.introduction  p{
+    line-height: 1.6vw;
+    font-size:19px;
+}
+.contain{
+    height:32%;
+    background-image: url("https://themewagon.github.io/dream-pulse/img/dream-pulse-header.jpg");
+    background-attachment:fixed;
+    background-size: cover;
+}
+.divide{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top:10%;
+    padding-bottom: 10%;
+}
+.aboutusleft{
+    width:35%;
+}
+ .aboutusleft >h2,i{
+    color: rgb(0,102,153);
+}
+.companyprofileright{
+    width: 35%;
+}
+ .companyprofileright > h2,i{
+    color: rgb(0,102,153);
+}
+.ourwork{
+    border:6px double gray;
+    margin:2%;
+}
+.ourwork img{
+    padding:10px;
+}
+.ourwork > h2{
+    color:rgb(0,102,153);
+}
+.ourclients{
+    margin-left:5%;
+}
+.ourclients > h2{
+    color:rgb(0,102,153);
+}
+.imagesall{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    padding-bottom:10%;
+}
+.imagesall > img{
+    object-fit: contain;
+    height:100px;
+    width:200px;
+    padding:15px;
+    border: 1px solid black;
+}
+.talktous{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding-bottom: 10%;
+}
+.talktousleft{
+    width: 35%;
+    border:6px double gray;
+    padding:2%;
+}
+.talktousleft > h2{
+    color:rgb(0,102,153);
+}
+.talktousright{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap:5%;
+}
+.button{
+    background-color: white;
+}
+.talktousright input,textarea,button{
+    border: none;
+    border-bottom: 2px solid rgb(0,102,153);
+}
+.talktousright >  button{
+    width:fit-content;
+    position: relative;
+    left:90%;
+}
+.talktousright > button:hover{
+     background-color: gray;
+}
