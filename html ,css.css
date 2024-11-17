@@ -7,23 +7,28 @@ html{
     scroll-behavior: smooth; 
 }
 .parent {
+        background:no-repeat url("https://templatemo.com/templates/templatemo_536_dream_pulse/img/dream-pulse-header.jpg");
         display: flex; 
         width: 100%;
         height: 100%;
     }
 .child1{
-    background-color:rgba(71,71,71);
+    background-color:rgba(0,0,0,0.5);
     color: rgb(255,255,255);
     height:100%;
     width:30%;
+    line-height: 40px;
     position:fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    position: fixed;
+    z-index: 100;
+    display: flex;
 }
 .child1 > h1{
-    border: 6px double gray;
+    border: 6px double white;
     padding: 30px;
 }
 .childlinks a{
@@ -32,12 +37,30 @@ html{
 }
 .childlinks li{
     list-style: square;
+    font-size: larger;
 }
-.childlinks li:hover{
-    transition-duration:1s;
-    transition-timing-function: linear;
-    transform: scale(0);
-}
+.childlinks{
+    text-decoration: none;
+    list-style: square;
+    color: white;
+    font-weight: 600;
+    font-size: larger;
+  }
+  .childlinks li:hover{
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 .footer a{
     text-decoration: none;
     color:rgb(255,255,255);
@@ -45,31 +68,41 @@ html{
 .footer a:hover{
     color:orange;
 }
-.icons i{
+.iconscenter{
+    display: flex;
+}
+.iconscenter i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: black;
     width:20px;
     background-color: white;
-    margin: 10px;
-    padding:10px 20px;
+    margin:10px;
+    padding:10px 20px 10px 20px;
     border-radius: 10px;
+}
+.iconscenter>i:hover{
+    background-color: skyblue;
 }
 .child2{
     margin-left: 30%; 
     width: 70%;
 }
 .introduction{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left:60%;
-    width: 32%;
-    height: 55%;
-    padding:2%;
-    border:1px solid black;
-    color: rgb(51,51,51);
-    box-sizing: border-box;
-    background-color: rgba(255,255,255,0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 15pt;
+        line-height: 40px;
+        align-items: center;
+        margin-left:40%;
+        margin-top: 15%;
+        width: 38%;
+        height: 400px;
+        background-color: rgba(255,255,255, 0.3);
+        border: 3px solid white;  
+        padding: 2%;
 }
 .introduction > h2{
     color: rgb(0,102,153);
@@ -79,33 +112,42 @@ html{
     font-size:19px;
 }
 .contain{
-    height:32%;
-    background-image: url("https://themewagon.github.io/dream-pulse/img/dream-pulse-header.jpg");
-    background-attachment:fixed;
-    background-size: cover;
+    padding-bottom:22%;
 }
 .divide{
     display: flex;
     justify-content: space-around;
     width: 100%;
-    padding-top:10%;
+    padding-top:20%;
     padding-bottom: 10%;
 }
-.aboutusleft{
-    width:35%;
+#section-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 120px;
 }
- .aboutusleft >h2,i{
-    color: rgb(0,102,153);
+.aboutusleft{
+    width: 23%;
+    line-height: 2vw;
+    font-size: large;
+}
+ .aboutusleft > h2,i{
+    color: rgb(0,102,153); 
 }
 .companyprofileright{
-    width: 35%;
+    width: 23%;
+    line-height: 2vw;
+    font-size: large;
 }
  .companyprofileright > h2,i{
     color: rgb(0,102,153);
 }
 .ourwork{
     border:6px double gray;
-    margin:2%;
+    padding:5%;
+    margin: 5%;
 }
 .ourwork img{
     padding:10px;
@@ -113,8 +155,34 @@ html{
 .ourwork > h2{
     color:rgb(0,102,153);
 }
+.carousel-item img:hover{
+    border: 3px solid gray;
+}
+.carousel-item  figcaption{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0,0,0,0.2);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  .carousel-item :hover figcaption {
+    opacity: 1; 
+  }
+  .image-container:hover .overlay-text {
+    opacity: 1; 
+  }
 .ourclients{
     margin-left:5%;
+    font-size: large;
+    line-height: 2vw;
+    padding: 10% 0%;
 }
 .ourclients > h2{
     color:rgb(0,102,153);
@@ -130,13 +198,15 @@ html{
     height:100px;
     width:200px;
     padding:15px;
-    border: 1px solid black;
+    border: 1px solid gray;
 }
 .talktous{
     display: flex;
     width: 100%;
     justify-content: space-around;
     padding-bottom: 10%;
+    font-size: large;
+    line-height: 2vw;
 }
 .talktousleft{
     width: 35%;
@@ -156,6 +226,10 @@ html{
     background-color: white;
 }
 .talktousright input,textarea,button{
+    border: none;
+    border-bottom: 2px solid gray;
+}
+.talktousright input:focus,textarea:focus{
     border: none;
     border-bottom: 2px solid rgb(0,102,153);
 }
